@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "method": "Curated, verified primary-source research. Bull/bear text is an inference from cited facts, not company guidance or investment advice. Research snapshot is separate from the April inbox replay.",
+  "dossiers": [
+    {
+      "symbol": "WIPRO",
+      "company": "Wipro Limited",
+      "asOf": "2025-08-05",
+      "period": "FY2025",
+      "snapshot": "Technology services and consulting. Better profitability and cash conversion coexist with shrinking IT-services revenue.",
+      "sources": [
+        {
+          "id": "wipro-ar25",
+          "title": "Wipro Integrated Annual Report 2024–25",
+          "url": "https://www.wipro.com/content/dam/nexus/en/investor/annual-reports/2024-2025/Integrated-annual-report-2024-25.pdf",
+          "kind": "annual_report",
+          "date": null,
+          "dateNote": "Reporting year ended 2025-03-31; exact publication date not verified.",
+          "section": "Year at a glance, printed pages 26–27",
+          "excerpt": "Operating Cash flow by Net Income",
+          "claims": ["Annual report rounds FY25 operating cash flow/net income to 128%."]
+        },
+        {
+          "id": "wipro-call25",
+          "title": "Wipro Q4 FY25 earnings-call transcript, filed 17 April 2025",
+          "url": "https://www.wipro.com/content/dam/nexus/en/investor/corporate-governance/stock-exchange-filing/transcript-of-the-analyst-institutional-investor-meeting-17-apr-2025.pdf",
+          "kind": "transcript",
+          "date": "2025-04-17",
+          "eventDate": "2025-04-16",
+          "page": 4,
+          "pageNote": "PDF page 4: FY25 revenue/margin; PDF pages 6–7: Q1 FY26 guidance; page 9: booking conversion.",
+          "excerpt": "For the full year IT Services revenues were $10.51 billion reflecting year-on-year degrowth of 2.3%.",
+          "claims": ["FY25 IT-services operating margin was 17.1%.", "Q1 FY26 guidance was a sequential constant-currency decline of 1.5–3.5%.", "Management said deal ramp-up timing and existing-project ramp-downs affect revenue conversion."]
+        }
+      ],
+      "facts": [
+        {"label": "FY25 IT-services revenue", "value": 10.51, "unit": "USD billion", "sourceId": "wipro-call25"},
+        {"label": "FY25 IT-services growth", "value": -2.3, "unit": "% YoY constant currency", "sourceId": "wipro-call25"},
+        {"label": "FY25 IT-services operating margin", "value": 17.1, "unit": "%", "sourceId": "wipro-call25"},
+        {"label": "FY25 operating cash flow / net income", "value": 128, "unit": "% (annual-report rounding)", "sourceId": "wipro-ar25"}
+      ],
+      "bull": "Inference: cash conversion above profits and stronger margins provide resilience during weak demand.",
+      "bullSourceIds": ["wipro-ar25", "wipro-call25"],
+      "bear": "Inference: better bookings have not yet reversed revenue contraction; management guided another sequential decline.",
+      "bearSourceIds": ["wipro-call25"],
+      "openQuestion": "When will new contracts outweigh ramp-downs in existing projects?",
+      "limitations": "No four-quarter promise score; full-year guidance was not supplied. Do not treat operating margin as EBITDA margin."
+    },
+    {
+      "symbol": "TCS",
+      "company": "Tata Consultancy Services",
+      "asOf": "2025-08-05",
+      "period": "FY2025",
+      "snapshot": "Global technology services. Strong cash generation accompanies modest growth; management provides no numeric revenue or earnings guidance.",
+      "sources": [
+        {
+          "id": "tcs-ar25",
+          "title": "TCS Integrated Annual Report 2024–25 — Financial Capital",
+          "url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/faq/tcs-integrated-annual-report-2024-2025-2pager.pdf",
+          "kind": "annual_report",
+          "date": null,
+          "dateNote": "Reporting year ended 2025-03-31; exact publication date not verified.",
+          "section": "Financial Capital: operating cash flow and cash conversion",
+          "excerpt": "TCS maintained an excellent cash conversion ratio exceeding 100%",
+          "claims": ["FY25 operating cash flow was INR48,908 crore and OCF/net profit was 100.7%."]
+        },
+        {
+          "id": "tcs-call25",
+          "title": "TCS Q4 FY2025 earnings conference call, 10 April 2025",
+          "url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010%2C%202025.pdf",
+          "kind": "transcript",
+          "date": "2025-04-10",
+          "dateNote": "Call date; exact transcript publication date not verified.",
+          "excerpt": "Our financial year 2025 revenue grew by 4.2% in constant currency.",
+          "claims": ["FY25 operating margin was 24.3%.", "Management explicitly does not provide specific revenue or earnings guidance.", "Q4 North American revenue declined 1.9% YoY in constant currency."]
+        }
+      ],
+      "facts": [
+        {"label": "FY25 revenue growth", "value": 4.2, "unit": "% YoY constant currency", "sourceId": "tcs-call25"},
+        {"label": "FY25 operating margin", "value": 24.3, "unit": "%", "sourceId": "tcs-call25"},
+        {"label": "FY25 operating cash flow", "value": 48908, "unit": "INR crore", "sourceId": "tcs-ar25"},
+        {"label": "FY25 operating cash flow / net profit", "value": 100.7, "unit": "%", "sourceId": "tcs-ar25"}
+      ],
+      "bull": "Inference: profits converting into cash and a 24.3% operating margin support financial resilience.",
+      "bullSourceIds": ["tcs-ar25", "tcs-call25"],
+      "bear": "Inference: North American contraction tempers the broader growth story.",
+      "bearSourceIds": ["tcs-call25"],
+      "openQuestion": "Does the stronger order book translate into broad-based revenue growth?",
+      "limitations": "A numeric guidance hit/miss score is unavailable because TCS does not issue specific revenue or earnings guidance."
+    },
+    {
+      "symbol": "HCLTECH",
+      "company": "HCL Technologies Limited",
+      "asOf": "2025-08-05",
+      "period": "FY2025",
+      "snapshot": "Technology services, engineering and software. Cash generation is strong, while software seasonality complicates quarterly comparisons.",
+      "sources": [
+        {
+          "id": "hcl-ar25",
+          "title": "HCLTech Annual Report 2024–25",
+          "url": "https://www.hcltech.com/sites/default/files/document/open/annual-report/2025-08/Annual-Report-2024-25.pdf",
+          "kind": "annual_report",
+          "date": "2025-08-02",
+          "dateNote": "Annual-report filing date verified on HCLTech Regulation 30(8) disclosures page.",
+          "section": "CEO letter, printed page 4",
+          "excerpt": "The Operating Cash Flow to Net Income conversion was 129%",
+          "claims": ["FY25 operating cash flow/net income was 129%; free cash flow/net income was 123%."]
+        },
+        {
+          "id": "hcl-call25",
+          "title": "HCLTech Q4 FY25 earnings conference call, 22 April 2025",
+          "url": "https://www.hcltech.com/sites/default/files/document/open/call-trans/2025-04/HCLTech-Earnings-Q4FY25-Transcript.pdf",
+          "kind": "transcript",
+          "date": "2025-04-25",
+          "eventDate": "2025-04-22",
+          "dateNote": "Publication date verified on HCLTech archives.",
+          "excerpt": "Our revenues declined 0.8% sequentially, due to the seasonality in the Software business.",
+          "claims": ["FY25 revenue grew 4.7% in constant currency and operating margin was 18.3%.", "Q4 revenue declined 0.8% sequentially in constant currency; management attributed this to software seasonality."]
+        }
+      ],
+      "facts": [
+        {"label": "FY25 revenue growth", "value": 4.7, "unit": "% YoY constant currency", "sourceId": "hcl-call25"},
+        {"label": "FY25 operating margin", "value": 18.3, "unit": "%", "sourceId": "hcl-call25"},
+        {"label": "FY25 operating cash flow / net income", "value": 129, "unit": "%", "sourceId": "hcl-ar25"},
+        {"label": "FY25 free cash flow / net income", "value": 123, "unit": "%", "sourceId": "hcl-ar25"}
+      ],
+      "bull": "Inference: cash conversion above reported profits supports earnings quality.",
+      "bullSourceIds": ["hcl-ar25"],
+      "bear": "Inference: full-year growth should not obscure the sequential Q4 revenue decline.",
+      "bearSourceIds": ["hcl-call25"],
+      "openQuestion": "How much of the next quarter's change is software seasonality versus underlying demand?",
+      "limitations": "Annual report was published after the April replay. This research is a separate August snapshot; EBIT is not EBITDA."
+    }
+  ],
+  "verificationNotes": [
+    "Only official company documents support the dossiers; broker reports and news were excluded.",
+    "Source page values, when present, use one-based PDF page numbers. Printed page references are explicitly labelled in section.",
+    "Unknown publication dates remain null. A call date is not automatically a transcript publication date.",
+    "HCLTech annual-report publication: https://www.hcltech.com/investor-relations/disclosures-under-regulation-30-8 . Transcript publication: https://www.hcltech.com/en-us/investor-relations/archives .",
+    "TCS annual cash conversion 100.7% differs from its Q4-only 125.1%; do not mix horizons.",
+    "Wipro annual-report OCF/net-income figure is rounded to128%; earnings datasheet reports128.2%. The dossier preserves the annual-report precision."
+  ]
+}

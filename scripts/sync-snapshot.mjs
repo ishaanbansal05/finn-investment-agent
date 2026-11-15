@@ -1,0 +1,10 @@
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { refreshPortfolio } from '../lib/providers.ts';
+const companies = JSON.parse(await readFile(new URL('../data/portfolio.json',import.meta.url),'utf8'));
+const snapshot = await refreshPortfolio(companies);
+snapshot.mode='snapshot';
+snapshot.filings=snapshot.filings.filter(f=>Date.parse(f.publishedAt)>=Date.parse(snapshot.asOf)-30*86400000);
+if(snapshot.quotes.length===0 && snapshot.filings.length===0) throw new Error('All providers failed. Existing snapshot preserved.');
+await mkdir(new URL('../data/',import.meta.url),{recursive:true});
+await writeFile(new URL('../data/snapshot.json',import.meta.url),JSON.stringify(snapshot,null,2));
+console.log(JSON.stringify({asOf:snapshot.asOf,quotes:snapshot.quotes.length,filings:snapshot.filings.length,coverage:snapshot.coverage},null,2));

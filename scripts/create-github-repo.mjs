@@ -1,0 +1,12 @@
+import {spawnSync} from 'node:child_process';
+const lookup=spawnSync('git',['credential','fill'],{input:'protocol=https\nhost=github.com\nusername=ishaanbansal05\n\n',encoding:'utf8',env:{...process.env,GCM_INTERACTIVE:'Never'}});
+const token=lookup.stdout?.split(/\r?\n/).find(l=>l.startsWith('password='))?.slice(9);
+if(!token)throw new Error('GitHub authentication unavailable.');
+const headers={Authorization:`Bearer ${token}`,'User-Agent':'FINN-submission','X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'};
+const user=await(await fetch('https://api.github.com/user',{headers})).json();if(user.login!=='ishaanbansal05')throw new Error('Unexpected GitHub account.');
+const name='finn-investment-agent';const exists=await fetch(`https://api.github.com/repos/${user.login}/${name}`,{headers});
+if(exists.status!==404)throw new Error('Repository name is already in use; existing repository preserved.');
+const r=await fetch('https://api.github.com/user/repos',{method:'POST',headers,body:JSON.stringify({name,description:'FINN — Mobile-first, primary-source investment intelligence. Built for the ENAM AI Engineer Challenge by Ishaan Bansal.',private:false,auto_init:false,homepage:'https://finn-ishaan-investment-intelligence.lakshay-iit27.chatgpt.site'})});
+const d=await r.json();if(!r.ok)throw new Error(`GitHub creation returned ${r.status}`);
+const result=spawnSync('git',['remote','add','github',d.clone_url],{encoding:'utf8'});if(result.status!==0)throw new Error('Could not configure GitHub remote.');
+console.log(JSON.stringify({url:d.html_url,public:!d.private,remote:d.clone_url}));
