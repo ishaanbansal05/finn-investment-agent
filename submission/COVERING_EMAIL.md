@@ -7,8 +7,6 @@ I’m submitting FINN, a mobile-first investment intelligence prototype built ar
 
 Demo: https://finn-investment-agent-iota.vercel.app
 Repository: https://github.com/ishaanbansal05/finn-investment-agent
-AI build history: https://github.com/ishaanbansal05/finn-investment-agent/blob/main/docs/AI_BUILD_HISTORY.md
-Build conversation: https://github.com/ishaanbansal05/finn-investment-agent/blob/main/docs/BUILD_CONVERSATION.md
 
 The brief monitors an 18-company mock portfolio using real EOD prices and NSE announcements. It ranks events, collapses routine paperwork, supports configurable price/volume/category signals, and keeps the source behind every item inspectable.
 
@@ -18,7 +16,7 @@ For other NSE tickers, FINN discovers annual reports and transcripts, extracts p
 
 I deliberately left out trade execution, background notification delivery, OCR and universal financial-table extraction. I prioritized a working attention queue and an auditable research interaction. Next I would persist immutable document versions, add a durable ingestion/alert ledger, and evaluate financial extraction and claim entailment against analyst-reviewed examples.
 
-The repository includes setup instructions, validation results and a three-minute demo guide. I used Codex throughout and included the visible build conversation to make that process inspectable.
+The repository includes setup instructions, validation results and a three-minute demo guide. I used Codex throughout the build.
 
 Regards,
 Ishaan Bansal

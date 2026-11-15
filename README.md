@@ -11,8 +11,6 @@ FINN turns an 18-company mock portfolio into a source-linked attention list. The
 - [Three-minute demo script](docs/DEMO.md)
 - [Validation and known limits](docs/VALIDATION.md)
 - [Covering email](submission/COVERING_EMAIL.md)
-- [AI build history](docs/AI_BUILD_HISTORY.md)
-- [Actual user/assistant conversation export](docs/BUILD_CONVERSATION.md)
 
 ## Try this first
 
