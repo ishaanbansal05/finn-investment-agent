@@ -85,7 +85,6 @@ app/api/                  Snapshot, live refresh, discovery, research, health
 data/                     Real portfolio snapshot + audited research evidence
 tests/                    Financial/data checks and phone/desktop browser journeys
 docs/                     Architecture, evidence policy, demo, validation, AI history
-submission/               Ready-to-review covering email and submission checklist
 ```
 
 No secret is required in browser code or source control. The hosted key is a server-side runtime secret. A per-isolate request limit reduces accidental API usage; use a durable global quota and authentication before operating beyond a small assessment demo.
