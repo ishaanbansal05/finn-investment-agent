@@ -4,7 +4,8 @@
 
 FINN turns an 18-company mock portfolio into a source-linked attention list. The research desk audits management’s claims against reported outcomes and lets you ask questions about any NSE ticker with available primary documents.
 
-- **Demo:** https://finn-ishaan-investment-intelligence.lakshay-iit27.chatgpt.site
+- **Demo:** https://finn-investment-agent-iota.vercel.app
+- **Alternate deployment:** https://finn-ishaan-investment-intelligence.lakshay-iit27.chatgpt.site
 - **Repository:** https://github.com/ishaanbansal05/finn-investment-agent
 - [Product decisions and architecture](docs/ARCHITECTURE.md)
 - [Three-minute demo script](docs/DEMO.md)
@@ -23,7 +24,7 @@ FINN turns an 18-company mock portfolio into a source-linked attention list. The
 
 ## Run locally
 
-Requires Node **24+** and npm. The underlying framework is React + Vinext, a Vite implementation of the Next.js App Router, deployed as a Cloudflare Worker.
+Requires Node **24.x** and npm. The app shares its React App Router implementation across standard Next.js on Vercel and the original Vinext/Cloudflare deployment.
 
 ```sh
 npm ci
@@ -50,6 +51,15 @@ npm run test:browser  # requires the dev server
 npm run build
 npm start             # serves the built Worker locally
 ```
+
+For the Vercel/Next.js runtime:
+
+```sh
+npm run build:vercel
+node scripts/start-vercel-local.mjs  # production server, reads ignored .dev.vars
+```
+
+For Next.js development, copy `.env.example` to an ignored `.env.local`, set the key there, and run `npm run dev:vercel`. The committed `vercel.json` selects the Next.js build automatically. See [Vercel deployment](docs/VERCEL.md) for deployment and secret setup.
 
 To regenerate the bundled real-data snapshot:
 

@@ -14,6 +14,7 @@ The accompanying `BUILD_CONVERSATION.md` is an export of the actual visible user
 6. Integrated Hyde’s documented OpenAI-compatible API, using the key entered locally by the user. Verified actual generation, then configured the hosted key as a runtime secret.
 7. Ran type checking, domain tests, the production build and real browser journeys. Fixed Cloudflare fetch-mode differences, PDF redirects, hydration timing in tests and a text encoding issue. Recorded provider-size limitations.
 8. Prepared deployment, repository publication, the covering email, demo script and engineering notes.
+9. At the candidate’s request, added a standard Next.js/Node runtime for Vercel, completed browser sign-in to the candidate’s Vercel account, configured the model key as a private runtime secret, repaired a cross-platform optional-dependency lockfile issue, and deployed the production app. Phone and desktop browser tests passed on the public Vercel address.
 
 ## Human decisions captured
 

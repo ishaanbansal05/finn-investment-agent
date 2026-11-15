@@ -161,3 +161,65 @@ The hosted test caught an empty model answer. I traced it to GLM’s default rea
 
 I’m publishing that fix and adding checks for empty, truncated, and invalidly cited model responses before the final handoff.
 
+
+## 25. Codex
+
+The final hosted research check passed: KPITTECH returned a model answer in nine seconds with eight cited passages and no source warnings. The updated code, tests, documents, and ZIP are synchronized.
+
+FINN is ready for your review. The covering email remains a draft; nothing has been sent to ENAM.
+
+
+## 26. Ishaan
+
+deploy it using my vercel 
+
+
+## 27. Codex
+
+I’ll check your Vercel access and adapt the app for Vercel’s runtime, then build and deploy it.
+
+## 28. Codex
+
+The app needs a runtime adjustment for Vercel. I’m adding a standard Next.js build and Node-based environment handling, then testing the research API under that build.
+
+Vercel access isn’t connected in this session yet. Please enable the Vercel connection while I finish those checks.
+
+## 29. Ishaan
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_6da93220d6194a53987247d581a18985\",0]","question":"Please enable the Vercel connection for the account you want to use, then reply here. If the account has multiple teams, include the intended team name.","answer":"Vercel is connected"}]
+</send_user_message_question_reply>
+
+
+## 30. Codex
+
+The Vercel build has compiled and passed TypeScript. The connected deployment tools aren’t available here yet, and the CLI reports logged out, so I started Vercel’s browser sign-in flow. That will let me deploy directly to your account.
+
+## 31. Ishaan
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_5dab9f81ab4d48ffa9a80a00ec7309a3\",0]","question":"Please authorize the Vercel CLI at https://vercel.com/oauth/device?user_code=[REDACTED] using your Vercel account, then reply when done. No API token needs to be shared.","answer":"Authorized Vercel CLI"}]
+</send_user_message_question_reply>
+
+
+## 32. Codex
+
+Vercel sign-in succeeded as **ishaanbansal05**. The Next.js build is running locally with Hyde configured. I’m checking the account’s projects, then I’ll deploy FINN and verify the production URL.
+
+## 33. Codex
+
+FINN is building in your Vercel account, and the project is connected to the GitHub repository. The Vercel-ready build has passed the phone and desktop journeys locally, including live research with eight cited passages. Your Hyde key is configured as a private Vercel environment secret.
+
+## 34. Codex
+
+Vercel’s first build stopped during dependency installation because the lockfile was missing two optional packages needed on Linux. I’ve repaired the lockfile and pinned Vercel to Node 24, the version already tested locally. I’m retrying the deployment now.
+
+## 35. Codex
+
+The Linux installation now passes, and Vercel has compiled the app and passed TypeScript. It’s packaging the server functions. Once it reports the deployment ready, I’ll check public access and run a live research request on the new URL.
+
+## 36. Codex
+
+FINN is live on Vercel: **https://finn-investment-agent-iota.vercel.app**
+
+The public URL opens without signing in, both phone and desktop journeys pass, and the health check confirms Hyde is configured. I’m updating the repository and submission email to use this address, then checking one research answer on Vercel.

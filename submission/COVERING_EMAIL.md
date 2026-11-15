@@ -5,7 +5,7 @@ Dear ENAM team,
 
 I’m submitting FINN, a mobile-first investment intelligence prototype built around two questions: “What changed that deserves my attention?” and “Did management deliver what it promised?”
 
-Demo: https://finn-ishaan-investment-intelligence.lakshay-iit27.chatgpt.site
+Demo: https://finn-investment-agent-iota.vercel.app
 Repository: https://github.com/ishaanbansal05/finn-investment-agent
 AI build history: https://github.com/ishaanbansal05/finn-investment-agent/blob/main/docs/AI_BUILD_HISTORY.md
 Build conversation: https://github.com/ishaanbansal05/finn-investment-agent/blob/main/docs/BUILD_CONVERSATION.md

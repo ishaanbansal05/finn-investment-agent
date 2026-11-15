@@ -2,6 +2,8 @@
 
 Validated on 15 November 2026 on Windows, Node 24.13.0.
 
+Vercel deployment: https://finn-investment-agent-iota.vercel.app. The Linux Next.js production build passed on Node 24. Public phone and desktop browser journeys passed without authentication; the health endpoint returned HTTP 200 with AI configured. See [deployment details](VERCEL.md).
+
 - TypeScript strict type check passed.
 - Production Cloudflare Worker build passed.
 - 15 data/domain/model-contract checks passed: comparison denominators; current-session exclusion from volume baseline; result-vs-ad classification; IST timestamp conversion; symbol validation; time-window boundaries and future filtering; attachment deduplication; threshold effects and stable IDs; mock-weight reconciliation; document discovery exclusions; page-preserving retrieval; public HTTPS URL checks; bounded low-effort model requests; invalid citations/empty output; rejection of truncated answers.

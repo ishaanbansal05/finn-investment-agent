@@ -68,4 +68,4 @@ PDFs are capped at 12 MB and 600 pages. Images are not rendered. Pages are extra
 
 ## Stack trade-off
 
-Vinext/React makes the mobile and desktop product one implementation and deploys to the supplied Cloudflare runtime. It is a beta framework, so the repository includes type checks, a build and actual browser journeys. Framework starter support files remain in the repository; application behavior is concentrated in the implementation map in the README. A production choice would also evaluate a stable framework/runtime against the same tests.
+React makes the mobile and desktop product one implementation. Vercel uses standard Next.js with Node functions; the original Cloudflare deployment uses Vinext. A narrow environment adapter separates platform secret handling from application logic, and both builds use the same research and domain engine. The repository includes type checks, production builds and actual browser journeys. Framework starter support files remain in the repository; application behavior is concentrated in the implementation map in the README. See [Vercel deployment](VERCEL.md).

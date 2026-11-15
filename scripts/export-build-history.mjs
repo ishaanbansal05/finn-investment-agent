@@ -6,7 +6,7 @@ let count=0;
 for(const row of rows){const p=row.payload;if(row.type!=='event_msg'||!['user_message','agent_message'].includes(p?.type))continue;if(p.type==='agent_message'&&!['commentary','final'].includes(p.phase))continue;
  const role=p.type==='user_message'?'user':'assistant';let text=p.message||'';if(!text.trim())continue;
  if(role==='user'&&/^<(environment_context|external_ide_context|external_codex_apps)/.test(text.trim()))continue;
- text=text.replace(/C:\\Users\\BANSAL/gi,'[local-user]').replace(/sk-[A-Za-z0-9_-]{12,}/g,'[REDACTED API KEY]').replace(/gh[pousr]_[A-Za-z0-9_]+/g,'[REDACTED GITHUB TOKEN]');
+ text=text.replace(/C:\\Users\\BANSAL/gi,'[local-user]').replace(/sk-[A-Za-z0-9_-]{12,}/g,'[REDACTED API KEY]').replace(/gh[pousr]_[A-Za-z0-9_]+/g,'[REDACTED GITHUB TOKEN]').replace(/user_code=[A-Z0-9-]+/g,'user_code=[REDACTED]');
  out.push(`## ${++count}. ${role==='user'?'Ishaan':'Codex'}\n\n${text}\n`);
 }
 await writeFile('docs/BUILD_CONVERSATION.md',out.join('\n'));console.log(`Exported ${count} visible messages.`);
