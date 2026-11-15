@@ -10,7 +10,6 @@ FINN turns an 18-company mock portfolio into a source-linked attention list. The
 - [Product decisions and architecture](docs/ARCHITECTURE.md)
 - [Three-minute demo script](docs/DEMO.md)
 - [Validation and known limits](docs/VALIDATION.md)
-- [Covering email](submission/COVERING_EMAIL.md)
 
 ## Try this first
 
