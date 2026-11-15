@@ -31,7 +31,9 @@ Cheap deterministic operations handle bulk ingestion, classification, comparison
 
 Screener serves only as a link index. Generated Screener summaries, broker notes and news are excluded. The server fetches at most one annual report and two recent calls per question; stores bounded in-memory caches; preserves source/page identity; and selects up to eight distinct relevant pages. The same source cannot supply duplicate chunks from the same page. The model receives roughly 11,200 characters of retrieved evidence rather than an entire report.
 
-Hyde is accessed with its documented OpenAI-compatible HTTP endpoint and `hyde/glm-5.3-flash`. The system prompt requires factual citations, matching financial periods and units, and explicit uncertainty. Source text is untrusted data. Citation IDs are checked against retrieved evidence before a generated answer is accepted. This prevents invented reference IDs; it does **not** establish entailment. Generated claims still need evidence review. If the model fails or the key is absent, original passages and coverage limitations remain available.
+Hyde is accessed with its documented OpenAI-compatible HTTP endpoint and `hyde/glm-5.3-flash`. Low reasoning effort is explicit: GLM-5.3 defaults to maximum effort, which can exhaust an answer budget before visible output. The system prompt requires factual citations, matching financial periods and units, and explicit uncertainty. Source text is untrusted data. Citation IDs are checked against retrieved evidence before a generated answer is accepted; empty and truncated outputs are rejected. This prevents invented reference IDs; it does **not** establish entailment. Generated claims still need evidence review. If the model fails or the key is absent, original passages and coverage limitations remain available.
+
+Provider references: [Hyde API](https://inference.hyde.tech/docs/introduction), [GLM reasoning controls](https://docs.z.ai/guides/capabilities/thinking), [unpdf](https://github.com/unjs/unpdf).
 
 ## Financial discipline
 
@@ -51,7 +53,7 @@ Hyde is accessed with its documented OpenAI-compatible HTTP endpoint and `hyde/g
 | NSE filings | 5 minutes; up to 150 per symbol | Missing exchange coverage is explicit |
 | Link discovery | 1 hour | Explain unavailable ticker/documents |
 | PDF pages | 24 hours, in-memory | Display failed source and original link |
-| Model synthesis | User initiated; 2,800 output-token cap | Cited extracts remain available |
+| Model synthesis | User initiated; low reasoning effort; 4,200 total output-token cap | Cited extracts remain available |
 | Request limits | 12 requests / 10 minutes / IP / isolate | 429 response |
 
 PDFs are capped at 12 MB and 600 pages. Images are not rendered. Pages are extracted sequentially; scanned PDFs require future OCR. Redirects are checked at every hop; URL inputs are not accepted from the client. Caches and rate limits are prototype-local to a Worker isolate and reset on restart. A production service needs durable storage, globally enforced quotas and authentication.

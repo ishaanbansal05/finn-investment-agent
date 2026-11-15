@@ -140,3 +140,24 @@ A company outside the four verified cases, KPITTECH, also completed live retriev
 
 The public GitHub repository is created. I’m packaging the tested source for hosting and checking the submission links.
 
+
+## 22. Codex
+
+The repository is public and accessible without signing in: [finn-investment-agent](https://github.com/ishaanbansal05/finn-investment-agent). It includes the code, setup guide, screenshots, covering email, and build history. The secret scan found no API key in the files being published.
+
+The hosted build is publishing now. I’ll check the public app and run a hosted research request before handing over the links.
+
+
+## 23. Codex
+
+FINN is live, and its public phone and desktop journeys pass without sign-in. The hosted app also confirms that Hyde is configured and can discover primary documents for KPITTECH.
+
+The repository and submission ZIP are ready. I’m waiting for the final hosted PDF-to-answer check, then I’ll hand over the demo, repository, email draft, and walkthrough.
+
+
+## 24. Codex
+
+The hosted test caught an empty model answer. I traced it to GLM’s default reasoning budget, then tested its documented low-effort setting. The same local research question now returns a cited answer in about four seconds, using 407 output tokens.
+
+I’m publishing that fix and adding checks for empty, truncated, and invalidly cited model responses before the final handoff.
+
