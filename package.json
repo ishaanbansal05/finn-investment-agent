@@ -15,7 +15,10 @@
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/domain.test.ts",
     "test:browser": "playwright test",
-    "data:sync": "node scripts/sync-snapshot.mjs"
+    "data:sync": "node scripts/sync-snapshot.mjs",
+    "build:vercel": "next build --webpack",
+    "dev:vercel": "next dev --port 5173",
+    "start:vercel": "next start --port 5173"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

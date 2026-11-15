@@ -1,5 +1,7 @@
 import { researchCompany } from '@/lib/research';
 import { aiConfig,gate } from '@/lib/server-config';
+export const runtime = 'nodejs';
+export const maxDuration = 120;
 export async function POST(request:Request){
   const blocked=gate(request);if(blocked)return blocked;
   if(Number(request.headers.get('content-length'))>5000)return Response.json({error:'Request too large.'},{status:413});
